@@ -21,7 +21,7 @@ while loop:
         bc = bc + lQty
     elif lType == 3:
         cc = cc + lQty
-    elif 4 < lType < 5:
+    elif 4 <= lType <= 5:
         g = g  + lQty
     
     print 'Gold coins: {}'.format(gc)
@@ -39,4 +39,11 @@ while loop:
         loop = True
     elif lEnd == 'n':
         loop = False
+        
+        print 'Gold coins: {}'.format(gc)
+        print 'silver coins: {}'.format(sc)
+        print 'Bronze coins: {}'.format(bc)
+        print 'Copper coins: {}'.format(cc)
+        print 'Gems: {}'.format(g)
+        print ''
     
