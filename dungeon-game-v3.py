@@ -23,19 +23,23 @@ while slaying:
                 
                 if atk == "y":
                     print 'You attack with %s points of damage, and took %d points of damage!' % (damage, eDamage)
+                    print ''
                     uH = uH - eDamage
                     eH = eH - damage
                 
                 if atk == "n":
                     print 'You chose to wait and took %s points of damage!' % (eDamage)
+                    print ''
                 
                 print 'Player health: %s' % (uH)
                 print 'Enemy health: %s' % (eH)
+                print ''
                 
                 if eH <= 0:
                     enemy = False
                     
                     print 'You hath slain the enemy!'
+                    print ''
                     
                     isLoot = random.randint(1, 100)
                     
@@ -47,8 +51,10 @@ while slaying:
                         lList = ['Gold Coins!', 'Silver Coins!', 'Bronze Coins!', 'Copper Coins!']
                         
                         print 'You found %s' % (lQty), lList[lType]
+                        print ''
                     else:
                         print 'You found no loot.'
+                        print ''
                     
                 elif uH <= 0:
                     enemy = False
@@ -57,6 +63,7 @@ while slaying:
             enemy = False
             
             print 'There was no enemy to fight.'
+            print ''
         
         
     if dir == "l":
@@ -66,25 +73,30 @@ while slaying:
         if a <= 10:
             enemy = True
             print 'A level %s enemy appeared!' % (lvl)
+            print ''
             
             while enemy:
                 atk = raw_input('Attack y or n? ')
                 
                 if atk == "y":
                     print 'You attack with %s points of damage, and took %d points of damage!' % (damage, eDamage)
+                    print ''
                     uH = uH - eDamage
                     eH = eH - damage
                 
                 if atk == "n":
                     print 'You chose to wait and took %s points of damage!' % (eDamage)
+                    print ''
                 
                 print 'Player health: %s' % (uH)
                 print 'Enemy health: %s' % (eH)
+                print ''
                 
                 if eH <= 0:
                     enemy = False
                     
                     print 'You hath slain the enemy!'
+                    print ''
                     
                     isLoot = random.randint(1, 100)
                     
@@ -96,10 +108,13 @@ while slaying:
                         lList = ['Gold Coins!', 'Silver Coins!', 'Bronze Coins!', 'Copper Coins!']
                         
                         print 'You found %s' % (lQty), lList[lType]
+                        print ''
                     else:
                         print 'You found no loot.'
+                        print ''
                     
                     print 'You hath slain the enemy!'
+                    print ''
                 elif uH <= 0:
                     enemy = False
         
@@ -107,3 +122,4 @@ while slaying:
         slaying = False
         
         print 'You have fallen in battle!'
+        print ''
