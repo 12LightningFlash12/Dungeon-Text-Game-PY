@@ -60,3 +60,4 @@ print 'Bronze Coin points: {}'.format(bcp)
 print 'Copper Coin points: {}'.format(ccp)
 
 print 'Total points: {}'.format(tp)
+
