@@ -36,9 +36,9 @@ while loop:
     print ''
     
     if lEnd == 'y':
-        loop = True
-    elif lEnd == 'n':
         loop = False
+    elif lEnd == 'n':
+        loop = True
         
         print 'Gold coins: {}'.format(gc)
         print 'silver coins: {}'.format(sc)
@@ -46,4 +46,17 @@ while loop:
         print 'Copper coins: {}'.format(cc)
         print 'Gems: {}'.format(g)
         print ''
-    
+
+gcp = gc * 10
+scp = sc * 7
+bcp = bc * 5
+ccp = cc * 3
+
+tp = gcp + scp + bcp + ccp
+
+print 'Gold Coin points: {}'.format(gcp)
+print 'Silver Coin points: {}'.format(scp)
+print 'Bronze Coin points: {}'.format(bcp)
+print 'Copper Coin points: {}'.format(ccp)
+
+print 'Total points: {}'.format(tp)
