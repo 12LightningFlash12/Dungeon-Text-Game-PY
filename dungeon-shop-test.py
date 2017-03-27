@@ -2,12 +2,12 @@ gems = 1000
 shop = True
 
 while shop:
-    print '|----------------------|'
-    print '|     Dungeon Shop     |'
-    print '|----------------------|'
-    print '| 1. Potion  2. Ration |'
-    print '|  50 gems   100 gems  |'
-    print '|----------------------|'
+    print '|---------------------------------------|'
+    print '|             Dungeon  Shop             |'
+    print '|---------------------------------------|'
+    print '| 1. Potion  2. Ration  3. Large Ration |'
+    print '|  50 gems   100 gems       200 gems    |'
+    print '|---------------------------------------|'
     
     print ''
     
