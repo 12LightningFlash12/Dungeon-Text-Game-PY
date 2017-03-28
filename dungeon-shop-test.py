@@ -6,7 +6,10 @@ while shop:
     print '|             Dungeon  Shop             |'
     print '|---------------------------------------|'
     print '| 1. Potion  2. Ration  3. Large Ration |'
-    print '|  50 gems   100 gems       200 gems    |'
+    print '|  50 gems    50 gems       100 gems    |'
+    print '|---------------------------------------|'
+    print '| 4. Large Ration                       |'
+    print '|    100 gems                           |'
     print '|---------------------------------------|'
     
     print ''
@@ -16,15 +19,25 @@ while shop:
     
     if item == '1':
         if gems >= 50:
-            print 'You recieved 1 potion.'
-            
+            print 'You recieved 1 Potion.'
             gems = gems - 50
         else:
             print 'You do not have enough gems.'
     elif item == '2':
-        if gems >= 100:
+        if gems >= 50:
             print 'You recieved 1 Ration.'
-            
+            gems = gems - 50
+        else:
+            print 'You do not have enough gems.'
+    elif item == '3':
+        if gems >= 100:
+            print 'You recieved 1 Large Potion.'
+            gems = gems - 100
+        else:
+            print 'You do not have enough gems.'
+    elif item == '4':
+        if gems >= 100:
+            print 'YOu recieved 1 Large Ration.'
             gems = gems - 100
         else:
             print 'You do not have enough gems.'
