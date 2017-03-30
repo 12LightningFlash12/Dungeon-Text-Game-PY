@@ -1,11 +1,15 @@
 import random
 
 enemy = True
-uh = 100
+MHEALTH = 100
+uh = MHEALTH
 eh = 100
 
 p = 5
 r = 5
+lp = 5
+lr = 5
+hpp = 5
 
 print 'An enemy appeared!'
 
@@ -30,25 +34,29 @@ while enemy:
         while inv:
             uh = uh
             
-            print '|-------------------------|'
-            print '|        INVENTORY        |'
-            print '|-------------------------|'
-            print '| Potions: {0}   Rations: {1} |'.format(p, r)
-            print '|-------------------------|'
+            print '|---------------------------------|'
+            print '|            INVENTORY            |'
+            print '|---------------------------------|'
+            print '|     Potion: {0}     Ration: {1}     |'.format(p, r)
+            print '|---------------------------------|'
+            print '| Large Potion: {0} Large Ration: {1} |'.format(lp, lr)
+            print '|---------------------------------|'
+            print '| HP Potion: {0}                    |'.format(hpp)
+            print '|---------------------------------|'
             ch = raw_input('Choose an item to use: ')
             print ''
             
             if ch == 'potion':
                 print 'You used a potion.'
                 
-                if uh == 100:
+                if uh == MHEALTH:
                     print 'The potion has no effect.'
-                elif 100 - uh >= 50:
-                    print 'The potion heals you 50HP.'
+                elif MHEALTH - uh >= 20:
+                    print 'The potion heals you 20HP.'
                     
-                    uh = uh + 50
-                elif 100 - uh <= 50:
-                    e = 100 - uh
+                    uh = uh + 20
+                elif MHEALTH - uh <= 20:
+                    e = MHEALTH - uh
                     
                     print 'The potion healed you {}HP'.format(e)
                     
@@ -59,20 +67,38 @@ while enemy:
             elif ch == 'ration':
                 print 'You used a ration.'
                 
-                if uh == 100:
+                if uh == MHEALTH:
                     print 'The ration had no effect.'
-                elif 100 - uh >= 50:
-                    print 'The ration heals you 50HP.'
+                elif MHEALTH - uh >= 20:
+                    print 'The ration heals you 20HP.'
                     
-                    uh = uh + 50
-                elif 100 - uh <= 50:
-                    e = 100 - uh
+                    uh = uh + 20
+                elif MHEALTH - uh <= 20:
+                    e = MHEALTH - uh
                     
                     print 'The ration heals you {}HP.'.format(e)
                     
                     uh = uh + e
                 
                 r = r - 1
+                uh = uh
+                print 'Health: {}'.format(uh)
+            elif ch == 'lpotion':
+                print 'You used a large potion.'
+                
+                if uh == MHEALTH:
+                    print 'The large potion had no effact.'
+                elif MHEALTH - uh >= 50:
+                    print 'The large potion heals you 50HP'
+                    
+                    uh = uh + 50
+                elif MHEALTH - uh <= 50:
+                    e = MHEALTH - uh
+                    
+                    print 'The large potion heals you {}HP.'.format(e)
+                    
+                    uh = uh + e
+                lp = lr - 1
                 uh = uh
                 print 'Health: {}'.format(uh)
             
@@ -83,6 +109,7 @@ while enemy:
             elif end == 'n':
                 inv = False
     
+    MHEALTH = MHEALTH
     uh = uh
     eh = eh
     
