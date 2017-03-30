@@ -18,7 +18,7 @@ uH = MHEALTH
 slaying = True
 
 while slaying:
-    dir = raw_input('Right or Left(r or l): ')
+    dir = raw_input('Right, Left, or Foward (r, l, or f): ')
     lvl = random.randint(1,5)
     eH = 100 * lvl
     damage = random.randint( 10 * lvl, 20 * lvl)
@@ -403,6 +403,192 @@ while slaying:
                     print ''
                 elif uH <= 0:
                     enemy = False
+    if dir == "f":
+            print 'You chose foward.'
+            
+            a = random.randint(0, 20)        
+            
+            if a <= 10:
+                enemy = True
+                print 'A level %s enemy appeared!' % (lvl)
+                print ''
+                
+                while enemy:
+                    atk = raw_input('Attack y or n? ')
+                    
+                    if atk == "y":
+                        print 'You attack with %s points of damage, and took %d points of damage!' % (damage, eDamage)
+                        print ''
+                        uH = uH - eDamage
+                        eH = eH - damage
+                    
+                    if atk == "n":
+                        inv = True
+                        
+                        while inv:
+                            uH = uH
+                            
+                            print '|---------------------------------|'
+                            print '|            INVENTORY            |'
+                            print '|---------------------------------|'
+                            print '|     Potion: {0}     Ration: {1}     |'.format(p, r)
+                            print '|---------------------------------|'
+                            print '| Large Potion: {0} Large Ration: {1} |'.format(lp, lr)
+                            print '|---------------------------------|'
+                            print '| HP Potion: {0}                    |'.format(hpp)
+                            print '|---------------------------------|'
+                            ch = raw_input('Choose an item to use: ')
+                            print ''
+                            
+                            if ch == 'potion':
+                                if p > 0:
+                                    print 'You used a potion.'
+                                    
+                                    if uH == MHEALTH:
+                                        print 'The potion has no effect.'
+                                    elif MHEALTH - uH >= 20:
+                                        print 'The potion heals you 20HP.'
+                                        
+                                        uH = uH + 20
+                                    elif MHEALTH - uH <= 20:
+                                        e = MHEALTH - uH
+                                        
+                                        print 'The potion healed you {}HP'.format(e)
+                                        
+                                        uH = uH + e
+                                    p = p - 1
+                                    uH = uH
+                                    print 'Health: {}'.format(uH)
+                                else:
+                                    print 'You do not have enough potions.'
+                            elif ch == 'ration':
+                                if r > 0:
+                                    print 'You used a ration.'
+                                    
+                                    if uH == MHEALTH:
+                                        print 'The ration had no effect.'
+                                    elif MHEALTH - uH >= 20:
+                                        print 'The ration heals you 20HP.'
+                                        
+                                        uH = uH + 20
+                                    elif MHEALTH - uH <= 20:
+                                        e = MHEALTH - uH
+                                        
+                                        print 'The ration heals you {}HP.'.format(e)
+                                        
+                                        uH = uH + e
+                                    
+                                    r = r - 1
+                                    uH = uH
+                                    print 'Health: {}'.format(uH)
+                                else:
+                                    print 'You do not have enought rations.'
+                            elif ch == 'lpotion':
+                                if lp > 0:
+                                    print 'You used a large potion.'
+                                    
+                                    if uH == MHEALTH:
+                                        print 'The large potion had no effact.'
+                                    elif MHEALTH - uH >= 50:
+                                        print 'The large potion heals you 50HP'
+                                        
+                                        uH = uH + 50
+                                    elif MHEALTH - uH <= 50:
+                                        e = MHEALTH - uH
+                                        
+                                        print 'The large potion heals you {}HP.'.format(e)
+                                        
+                                        uH = uH + e
+                                    lp = lp - 1
+                                    uH = uH
+                                    print 'Health: {}'.format(uH)
+                                else:
+                                    print 'You do not have enought large potions.'
+                            elif ch == 'lration':
+                                if lr >0:
+                                    print 'You used a large ration.'
+                                    
+                                    if uH == MHEALTH:
+                                        print 'The large ration had no effact.'
+                                    elif MHEALTH - uH >= 50:
+                                        print 'The large ration heals you 50HP'
+                                        
+                                        uH = uH + 50
+                                    elif MHEALTH - uH <= 50:
+                                        e = MHEALTH - uH
+                                        
+                                        print 'The large ration heals you {}HP.'.format(e)
+                                        
+                                        uH = uH + e
+                                    lr = lr - 1
+                                    uH = uH
+                                    print 'Health: {}'.format(uH)
+                                else:
+                                    print 'You do not have enough large rations.'
+                            elif ch == 'hppotion':
+                                if hpp > 0:
+                                    print 'You used a HP Potion.'
+                                    print 'Your Max Health was raised 20HP.'
+                                    print ''
+                                    
+                                    MHEALTH = MHEALTH + 20
+                                    print 'Max health: {}'.format(MHEALTH)
+                                    
+                                    hpp = hpp - 1
+                                else:
+                                    print 'You do not have enough HP potions.'
+                            
+                            end = raw_input('Stay y or n? ')
+                            
+                            if end == 'y':
+                                inv = True
+                            elif end == 'n':
+                                inv = False
+                    
+                    print 'Player health: %s' % (uH)
+                    print 'Enemy health: %s' % (eH)
+                    print ''
+                    
+                    if eH <= 0:
+                        enemy = False
+                        
+                        print 'You hath slain the enemy!'
+                        print ''
+                        
+                        isLoot = random.randint(1, 100)
+                        
+                        if 40 < isLoot < 65:
+                            print 'You found some loot!'
+                               
+                            lType = random.randint(0, 3)
+                            lQty = random.randint(1, 30)
+                            lList = ['Gold Coins!', 'Silver Coins!', 'Bronze Coins!', 'Copper Coins!']
+                            
+                            if lType == 0:
+                                gc = gc + lQty
+                            elif lType == 1:
+                                sc = sc + lQty
+                            elif lType == 2:
+                                bc = bc + lQty
+                            elif lType == 3:
+                                cc = cc + lQty
+                            elif 4 <= lType <= 5:
+                                g = g  + lQty
+                            
+                            print 'Gold coins: {}'.format(gc)
+                            print 'silver coins: {}'.format(sc)
+                            print 'Bronze coins: {}'.format(bc)
+                            print 'Copper coins: {}'.format(cc)
+                            print 'Gems: {}'.format(g)
+                            print ''
+                        else:
+                            print 'You found no loot.'
+                            print ''
+                        
+                        print 'You hath slain the enemy!'
+                        print ''
+                    elif uH <= 0:
+                        enemy = False
     
     if 23 < shop < 27:
         print 'You hath found a shop!'
