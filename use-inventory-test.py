@@ -98,9 +98,36 @@ while enemy:
                     print 'The large potion heals you {}HP.'.format(e)
                     
                     uh = uh + e
-                lp = lr - 1
+                lp = lp - 1
                 uh = uh
                 print 'Health: {}'.format(uh)
+            elif ch == 'lration':
+                print 'You used a large ration.'
+                
+                if uh == MHEALTH:
+                    print 'The large ration had no effact.'
+                elif MHEALTH - uh >= 50:
+                    print 'The large ration heals you 50HP'
+                    
+                    uh = uh + 50
+                elif MHEALTH - uh <= 50:
+                    e = MHEALTH - uh
+                    
+                    print 'The large ration heals you {}HP.'.format(e)
+                    
+                    uh = uh + e
+                lr = lr - 1
+                uh = uh
+                print 'Health: {}'.format(uh)
+            elif ch == 'hppotion':
+                print 'You used a HP Potion.'
+                print 'Your Max Health was raised 20HP.'
+                print ''
+                
+                MHEALTH = MHEALTH + 20
+                print 'Max health: {}'.format(MHEALTH)
+                
+                hpp = hpp - 1
             
             end = raw_input('Stay y or n? ')
             
