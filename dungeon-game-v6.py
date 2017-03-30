@@ -20,7 +20,7 @@ slaying = True
 while slaying:
     dir = raw_input('Right or Left(r or l): ')
     lvl = random.randint(1,5)
-    eH = 50 * lvl
+    eH = 100 * lvl
     damage = random.randint( 10 * lvl, 20 * lvl)
     eDamage = random.randint( 5, 10)
     shop = random.randint(1,50)
