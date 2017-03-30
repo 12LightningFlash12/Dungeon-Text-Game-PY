@@ -5,6 +5,7 @@ p = 0
 r = 0
 lp = 0
 lr = 0
+hpp = 0
 
 while shop:
     print '|---------------------------------------|'
@@ -13,8 +14,8 @@ while shop:
     print '| 1. Potion  2. Ration  3. Large Ration |'
     print '|  50 gems    50 gems       100 gems    |'
     print '|---------------------------------------|'
-    print '| 4. Large Ration                       |'
-    print '|    100 gems                           |'
+    print '| 4. Large Ration  5. HP Potion         |'
+    print '|    100 gems        300 gems           |'
     print '|---------------------------------------|'
     
     print ''
@@ -50,17 +51,25 @@ while shop:
             lr = lr + 1
         else:
             print 'You do not have enough gems.'
+    elif item == '5':
+        if gems >= 300:
+            print 'You recieved 1 HP Potion.'
+            gems = gems - 300
+            hpp = hpp + 1
+        else:
+            print 'You do not have enough gems.'
     
     gems = gems
     p = p
     r = r
     lp = lp
     lr = lr
-    
+    hpp = hpp
     print 'Potions: {}'.format(p)
     print 'Rations: {}'.format(r)
     print 'Large Potions: {}'.format(lp)
     print 'Large Rations: {}'.format(lr)
+    print 'HP Potions: {}'.format(hpp)
     print 'Gems: {}'.format(gems)
     print ''
     
@@ -76,5 +85,6 @@ print 'Potions: {}'.format(p)
 print 'Rations: {}'.format(r)
 print 'Large Potions: {}'.format(lp)
 print 'Large Rations: {}'.format(lr)
+print 'HP Potions: {}'.format(hpp)
 print 'Gems: {}'.format(gems)
 print ''
