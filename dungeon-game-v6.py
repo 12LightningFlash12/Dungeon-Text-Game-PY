@@ -62,87 +62,102 @@ while slaying:
                         print ''
                         
                         if ch == 'potion':
-                            print 'You used a potion.'
-                            
-                            if uH == MHEALTH:
-                                print 'The potion has no effect.'
-                            elif MHEALTH - uH >= 20:
-                                print 'The potion heals you 20HP.'
+                            if p > 0:
+                                print 'You used a potion.'
                                 
-                                uH = uH + 20
-                            elif MHEALTH - uH <= 20:
-                                e = MHEALTH - uH
-                                
-                                print 'The potion healed you {}HP'.format(e)
-                                
-                                uH = uH + e
-                            p = p - 1
-                            uH = uH
-                            print 'Health: {}'.format(uH)
+                                if uH == MHEALTH:
+                                    print 'The potion has no effect.'
+                                elif MHEALTH - uH >= 20:
+                                    print 'The potion heals you 20HP.'
+                                    
+                                    uH = uH + 20
+                                elif MHEALTH - uH <= 20:
+                                    e = MHEALTH - uH
+                                    
+                                    print 'The potion healed you {}HP'.format(e)
+                                    
+                                    uH = uH + e
+                                p = p - 1
+                                uH = uH
+                                print 'Health: {}'.format(uH)
+                            else:
+                                print 'You do not have enough potions.'
                         elif ch == 'ration':
-                            print 'You used a ration.'
-                            
-                            if uH == MHEALTH:
-                                print 'The ration had no effect.'
-                            elif MHEALTH - uH >= 20:
-                                print 'The ration heals you 20HP.'
+                            if r > 0:
+                                print 'You used a ration.'
                                 
-                                uH = uH + 20
-                            elif MHEALTH - uh <= 20:
-                                e = MHEALTH - uH
+                                if uH == MHEALTH:
+                                    print 'The ration had no effect.'
+                                elif MHEALTH - uH >= 20:
+                                    print 'The ration heals you 20HP.'
+                                    
+                                    uH = uH + 20
+                                elif MHEALTH - uH <= 20:
+                                    e = MHEALTH - uH
+                                    
+                                    print 'The ration heals you {}HP.'.format(e)
+                                    
+                                    uH = uH + e
                                 
-                                print 'The ration heals you {}HP.'.format(e)
-                                
-                                uH = uH + e
-                            
-                            r = r - 1
-                            uH = uH
-                            print 'Health: {}'.format(uH)
+                                r = r - 1
+                                uH = uH
+                                print 'Health: {}'.format(uH)
+                            else:
+                                print 'You do not have enought rations.'
                         elif ch == 'lpotion':
-                            print 'You used a large potion.'
-                            
-                            if uH == MHEALTH:
-                                print 'The large potion had no effact.'
-                            elif MHEALTH - uH >= 50:
-                                print 'The large potion heals you 50HP'
+                            if lp > 0:
+                                print 'You used a large potion.'
                                 
-                                uH = uH + 50
-                            elif MHEALTH - uH <= 50:
-                                e = MHEALTH - uH
-                                
-                                print 'The large potion heals you {}HP.'.format(e)
-                                
-                                uH = uH + e
-                            lp = lp - 1
-                            uH = uH
-                            print 'Health: {}'.format(uH)
+                                if uH == MHEALTH:
+                                    print 'The large potion had no effact.'
+                                elif MHEALTH - uH >= 50:
+                                    print 'The large potion heals you 50HP'
+                                    
+                                    uH = uH + 50
+                                elif MHEALTH - uH <= 50:
+                                    e = MHEALTH - uH
+                                    
+                                    print 'The large potion heals you {}HP.'.format(e)
+                                    
+                                    uH = uH + e
+                                lp = lp - 1
+                                uH = uH
+                                print 'Health: {}'.format(uH)
+                            else:
+                                print 'You do not have enought large potions.'
                         elif ch == 'lration':
-                            print 'You used a large ration.'
-                            
-                            if uH == MHEALTH:
-                                print 'The large ration had no effact.'
-                            elif MHEALTH - uH >= 50:
-                                print 'The large ration heals you 50HP'
+                            if lr >0:
+                                print 'You used a large ration.'
                                 
-                                uH = uH + 50
-                            elif MHEALTH - uH <= 50:
-                                e = MHEALTH - uH
-                                
-                                print 'The large ration heals you {}HP.'.format(e)
-                                
-                                uH = uH + e
-                            lr = lr - 1
-                            uH = uH
-                            print 'Health: {}'.format(uH)
+                                if uH == MHEALTH:
+                                    print 'The large ration had no effact.'
+                                elif MHEALTH - uH >= 50:
+                                    print 'The large ration heals you 50HP'
+                                    
+                                    uH = uH + 50
+                                elif MHEALTH - uH <= 50:
+                                    e = MHEALTH - uH
+                                    
+                                    print 'The large ration heals you {}HP.'.format(e)
+                                    
+                                    uH = uH + e
+                                lr = lr - 1
+                                uH = uH
+                                print 'Health: {}'.format(uH)
+                            else:
+                                print 'You do not have enough large rations.'
                         elif ch == 'hppotion':
-                            print 'You used a HP Potion.'
-                            print 'Your Max Health was raised 20HP.'
-                            print ''
-                            
-                            MHEALTH = MHEALTH + 20
-                            print 'Max health: {}'.format(MHEALTH)
-                            
-                            hpp = hpp - 1
+                            if hpp > 0:
+                                print 'You used a HP Potion.'
+                                print 'Your Max Health was raised 20HP.'
+                                print ''
+                                
+                                MHEALTH = MHEALTH + 20
+                                print 'Max health: {}'.format(MHEALTH)
+                                
+                                hpp = hpp - 1
+                            else:
+                                print 'You do not have enough HP potions.'
                         
                         end = raw_input('Stay y or n? ')
                         
@@ -240,87 +255,102 @@ while slaying:
                         print ''
                         
                         if ch == 'potion':
-                            print 'You used a potion.'
-                            
-                            if uH == MHEALTH:
-                                print 'The potion has no effect.'
-                            elif MHEALTH - uH >= 20:
-                                print 'The potion heals you 20HP.'
+                            if p > 0:
+                                print 'You used a potion.'
                                 
-                                uH = uH + 20
-                            elif MHEALTH - uH <= 20:
-                                e = MHEALTH - uH
-                                
-                                print 'The potion healed you {}HP'.format(e)
-                                
-                                uH = uH + e
-                            p = p - 1
-                            uH = uH
-                            print 'Health: {}'.format(uH)
+                                if uH == MHEALTH:
+                                    print 'The potion has no effect.'
+                                elif MHEALTH - uH >= 20:
+                                    print 'The potion heals you 20HP.'
+                                    
+                                    uH = uH + 20
+                                elif MHEALTH - uH <= 20:
+                                    e = MHEALTH - uH
+                                    
+                                    print 'The potion healed you {}HP'.format(e)
+                                    
+                                    uH = uH + e
+                                p = p - 1
+                                uH = uH
+                                print 'Health: {}'.format(uH)
+                            else:
+                                print 'You do not have enough potions.'
                         elif ch == 'ration':
-                            print 'You used a ration.'
-                            
-                            if uH == MHEALTH:
-                                print 'The ration had no effect.'
-                            elif MHEALTH - uH >= 20:
-                                print 'The ration heals you 20HP.'
+                            if r > 0:
+                                print 'You used a ration.'
                                 
-                                uH = uH + 20
-                            elif MHEALTH - uh <= 20:
-                                e = MHEALTH - uH
+                                if uH == MHEALTH:
+                                    print 'The ration had no effect.'
+                                elif MHEALTH - uH >= 20:
+                                    print 'The ration heals you 20HP.'
+                                    
+                                    uH = uH + 20
+                                elif MHEALTH - uH <= 20:
+                                    e = MHEALTH - uH
+                                    
+                                    print 'The ration heals you {}HP.'.format(e)
+                                    
+                                    uH = uH + e
                                 
-                                print 'The ration heals you {}HP.'.format(e)
-                                
-                                uH = uH + e
-                            
-                            r = r - 1
-                            uH = uH
-                            print 'Health: {}'.format(uH)
+                                r = r - 1
+                                uH = uH
+                                print 'Health: {}'.format(uH)
+                            else:
+                                print 'You do not have enought rations.'
                         elif ch == 'lpotion':
-                            print 'You used a large potion.'
-                            
-                            if uH == MHEALTH:
-                                print 'The large potion had no effact.'
-                            elif MHEALTH - uH >= 50:
-                                print 'The large potion heals you 50HP'
+                            if lp > 0:
+                                print 'You used a large potion.'
                                 
-                                uH = uH + 50
-                            elif MHEALTH - uH <= 50:
-                                e = MHEALTH - uH
-                                
-                                print 'The large potion heals you {}HP.'.format(e)
-                                
-                                uH = uH + e
-                            lp = lp - 1
-                            uH = uH
-                            print 'Health: {}'.format(uH)
+                                if uH == MHEALTH:
+                                    print 'The large potion had no effact.'
+                                elif MHEALTH - uH >= 50:
+                                    print 'The large potion heals you 50HP'
+                                    
+                                    uH = uH + 50
+                                elif MHEALTH - uH <= 50:
+                                    e = MHEALTH - uH
+                                    
+                                    print 'The large potion heals you {}HP.'.format(e)
+                                    
+                                    uH = uH + e
+                                lp = lp - 1
+                                uH = uH
+                                print 'Health: {}'.format(uH)
+                            else:
+                                print 'You do not have enought large potions.'
                         elif ch == 'lration':
-                            print 'You used a large ration.'
-                            
-                            if uH == MHEALTH:
-                                print 'The large ration had no effact.'
-                            elif MHEALTH - uH >= 50:
-                                print 'The large ration heals you 50HP'
+                            if lr >0:
+                                print 'You used a large ration.'
                                 
-                                uH = uH + 50
-                            elif MHEALTH - uH <= 50:
-                                e = MHEALTH - uH
-                                
-                                print 'The large ration heals you {}HP.'.format(e)
-                                
-                                uH = uH + e
-                            lr = lr - 1
-                            uH = uH
-                            print 'Health: {}'.format(uH)
+                                if uH == MHEALTH:
+                                    print 'The large ration had no effact.'
+                                elif MHEALTH - uH >= 50:
+                                    print 'The large ration heals you 50HP'
+                                    
+                                    uH = uH + 50
+                                elif MHEALTH - uH <= 50:
+                                    e = MHEALTH - uH
+                                    
+                                    print 'The large ration heals you {}HP.'.format(e)
+                                    
+                                    uH = uH + e
+                                lr = lr - 1
+                                uH = uH
+                                print 'Health: {}'.format(uH)
+                            else:
+                                print 'You do not have enough large rations.'
                         elif ch == 'hppotion':
-                            print 'You used a HP Potion.'
-                            print 'Your Max Health was raised 20HP.'
-                            print ''
-                            
-                            MHEALTH = MHEALTH + 20
-                            print 'Max health: {}'.format(MHEALTH)
-                            
-                            hpp = hpp - 1
+                            if hpp > 0:
+                                print 'You used a HP Potion.'
+                                print 'Your Max Health was raised 20HP.'
+                                print ''
+                                
+                                MHEALTH = MHEALTH + 20
+                                print 'Max health: {}'.format(MHEALTH)
+                                
+                                hpp = hpp - 1
+                            else:
+                                print 'You do not have enough HP potions.'
                         
                         end = raw_input('Stay y or n? ')
                         
