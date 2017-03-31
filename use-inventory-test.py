@@ -111,7 +111,7 @@ while enemy:
                 else:
                     print 'You do not have enought large potions.'
             elif ch == 'lration':
-                if lr >0:
+                if lr > 0:
                     print 'You used a large ration.'
                     
                     if uH == MHEALTH:
