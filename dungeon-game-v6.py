@@ -71,13 +71,14 @@ while slaying:
                                     print 'The potion heals you 20HP.'
                                     
                                     uH = uH + 20
+                                    p = p - 1
                                 elif MHEALTH - uH <= 20:
                                     e = MHEALTH - uH
+                                    p = p - 1
                                     
                                     print 'The potion healed you {}HP'.format(e)
                                     
                                     uH = uH + e
-                                p = p - 1
                                 uH = uH
                                 print 'Health: {}'.format(uH)
                             else:
@@ -126,7 +127,7 @@ while slaying:
                             else:
                                 print 'You do not have enought large potions.'
                         elif ch == 'lration':
-                            if lr >0:
+                            if lr > 0:
                                 print 'You used a large ration.'
                                 
                                 if uH == MHEALTH:
@@ -319,7 +320,7 @@ while slaying:
                             else:
                                 print 'You do not have enought large potions.'
                         elif ch == 'lration':
-                            if lr >0:
+                            if lr > 0:
                                 print 'You used a large ration.'
                                 
                                 if uH == MHEALTH:
