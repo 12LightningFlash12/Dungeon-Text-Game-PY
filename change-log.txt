@@ -1,1 +1,67 @@
+v1:
+-added:
+ -fighting
+ -HP + ATK
+ -death + death messages
 
+v2:
+-added:
+ -directions
+ -random enemy generation
+ -leveled enemies
+ -health counter
+
+v3:
+-added:
+ -random loot generation:
+  -copper coins
+  -bronze coins
+  -silver coins
+  -gold coins
+
+v4:
+-added:
+ -gems
+ -loot counter
+ -score system
+
+v5:
+-added:
+ -shop
+ -inventory
+ -items:
+  -potion
+  large potion
+  ration
+  large potion
+
+v6:
+-added:
+ -health boost potion
+ -usable inventory
+
+v7:
+-added:
+ -random boss generation
+
+v8:
+-removed:
+ -items:
+  -ration
+  -large ration
+  -gems
+ -added:
+  -enemies(base):
+   -goblin
+   -skeleton
+   -undead
+   -spirit
+  -enemies(boss):
+   -goblin
+   -skeleton
+   -undead
+   -spirit
+  -items:
+   -attack boost potion
+   -poison potion
+   -large poison potion
