@@ -25,4 +25,4 @@ while slaying:
     
     if eH <= 0:
         slaying = False
-        print "YOu hath slain the beast!"
+        print "You hath slain the beast!"
