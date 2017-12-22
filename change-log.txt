@@ -45,23 +45,7 @@ v7:
  -random boss generation
 
 v8:
--removed:
- -items:
-  -ration
-  -large ration
-  -gems
- -added:
-  -enemies(base):
-   -goblin
-   -skeleton
-   -undead
-   -spirit
-  -enemies(boss):
-   -goblin
-   -skeleton
-   -undead
-   -spirit
-  -items:
-   -attack boost potion
-   -poison potion
-   -large poison potion
+-decreased the number of code within the game.
+
+v9:
+-
